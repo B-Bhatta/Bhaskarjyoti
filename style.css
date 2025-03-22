@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(155, 185, 245);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+nav {
+    display: flex;
+    justify-content: space-between; /* Changed for button */
+    align-items: center;
+    height: 50px;
+    background-color: rgb(184, 72, 248);
+    padding: 10px;
+}
+.menu-btn {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: beige;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.nav-links li {
+    list-style: none;
+    margin: 10px 15px;
+}
+.nav-links li a {
+    text-decoration: none;
+    color: beige;
+}
+.nav-links li a:hover {
+    color: rgb(92, 92, 224);
+    font-size: 0.9rem;
+}
+.left {
+    font-size: 1.2rem;
+}
+.firstsection {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0;
+    padding: 0 10px;
+}
+.firstsection > div {
+    width: 30%;
+    margin: 20px 0;
+}
+.leftsection {
+    font-size: 2.5rem;
+    margin: 20px 0;
+}
+.rightsection img {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px 0;
+}
+.purple { color: rgb(65, 7, 120); }
+#element { color: rgb(65, 7, 120); }
+.about, .work-experience, .project, .contact {
+    max-width: 90vw;
+    margin: auto;
+    padding: 10px;
+    text-align: left;
+}
+main hr {
+    border: 0;
+    background: rgb(145, 131, 223);
+    height: 1.2px;
+    margin: 8px 0;
+}
+.project-item {
+    background-color: rgb(145, 131, 223);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+.project-item h2 { font-size: 1.5rem; color: rgb(65, 7, 120); }
+.project-item p { font-size: 1rem; margin: 5px 0 10px; color: #333; }
+.project-item a { text-decoration: none; color: blue; }
+.project-item a:hover { color: rgb(92, 92, 224); text-decoration: underline; }
+.download-resume-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(184, 72, 248);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+.download-resume-btn:hover {
+    background-color: rgb(92, 92, 224);
+    transform: scale(1.05);
+}
+.footer {
+    background-color: rgb(184, 72, 248);
+    color: beige;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+@media screen and (max-width: 767px) {
+    .menu-btn {
+        display: block; /* Show button on mobile */
+    }
+    .nav-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(184, 72, 248);
+        position: absolute;
+        top: 50px;
+        left: 0;
+        padding: 10px 0;
+    }
+    .nav-links.active {
+        display: flex; /* Show when active */
+    }
+    .nav-links li { margin: 10px 0; }
+    .firstsection { flex-direction: column; align-items: center; }
+    .firstsection > div { width: 90%; }
+    .leftsection { font-size: 1.8rem; text-align: center; }
+    .left { font-size: 1rem; text-align: center; }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .firstsection > div { width: 45%; }
+    .leftsection { font-size: 2rem; }
+}
